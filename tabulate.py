@@ -5,7 +5,7 @@ def f(x):
 
 
 def tabulate():
-    N = 5
+    N = 20
     x0 = 0.0
     xn = 1.0
 

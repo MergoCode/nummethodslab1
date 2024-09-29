@@ -116,11 +116,13 @@ def main():
             foutput.write(f"[{i},{j}]    \t{xm[i]:.6f}\t{ym[i]:.6f}\t{s:.6f}\t{eps:.10f}\n")
             if (i != 0) and (i % 20 == 0):
                 j += 1
-
+    plt.figure(1)
     plt.plot(x, y, '.', label='Табульовані точки')  # Початкові точки
     
     plt.plot(xm, ym, color="red",  label='Оригінальна функція sin(x)')
     plt.plot(xm, ys, color="black", label='Наближене значення через сплайн')
+    plt.legend()
+    plt.figure(2)
     plt.plot(xm, eps_arr, color="green",label='Похибка')
     plt.legend()
     plt.show()
